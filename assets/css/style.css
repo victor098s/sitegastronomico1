@@ -28,7 +28,7 @@ body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to bottom, #fffde7, #fff);
   color: #333;
-  line-height: 1.6; /* Espcaçamento das entrelinhas*/
+  line-height: 1.6; /* Espacaçamento das entrelinhas*/
   overflow-x: hidden; /* Se o elemento ficar maior na esquerda e na direita ele não aparecera */
 }
 

@@ -17,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
     background: #fafafa;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.6;  /* O tamanho do espaçamento entre as linhas */
 }
 
 
@@ -83,7 +83,7 @@ header p {
 }
 
 .menu-grid {
-    display: grid;
+    display: grid;  /* O grid fará o alinhamento em grades */
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
@@ -104,7 +104,7 @@ header p {
 .card img {
     width: 100%;
     height: 180px;
-    object-fit: cover;
+    object-fit: cover;  /*Resmensiona uma imagem ou um vídeo */
     border-radius: 12px;
 }
 
@@ -144,20 +144,20 @@ nav a {
   color: #8b069a;
   text-decoration: none;
   margin: 0 1.5rem;
-  font-weight: bold;
-  position: relative;
+  font-weight: bold;  /* Esperssura da fonte */
+  position: relative; 
   transition: color 0.3s;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
+nav a::after {  /* ira selecionar os link e criará um pseudo-elemento após o conteúdo selecionado */
+  content: "";  /* Define o conteúdo de um elemento :: after */
+  position: absolute; /* Tira o elemento da posição principal e o novo posicionamento será o ::after */
   width: 0%;
   height: 3px;
   background: #fbc02d;
-  bottom: -5px;
+  bottom: -5px; /* A definição da borda inferior */
   left: 0;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out; /* Transição da largura, começando e terminando a transição lenta e acelerando no meio */
 }
 
 nav a:hover::after {
