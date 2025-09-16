@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Fonts do Sistema */
+  --fonte-size: 3rem;
+  --font-style: normal;
+  --font-weight: 400 ; 
+  --font-family: 'Oi', serif;
+
+  /* Padrão de cores */
+  --cor-nav: #8b069a;
+  --cor-nav-a-bckground: #fbc02d;
+  --angulo: 90deg;
+  --inicio:#ffffff;
+  --meio:#d395ff;
+  --fim:#cafc05;
+
+
+  /* medidas e espaçamentos */
+  --margin-basic: margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #fffde7, #fff);
+  color: #333;
+  line-height: 1.6; /* Espcaçamento das entrelinhas*/
+  overflow-x: hidden; /* Se o elemento ficar maior na esquerda e na direita ele não aparecera */
+}
+
+header {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #d395ff,
+    #cafc05
+  );
+    /* 90deg,
+    #ffffff,
+    #d395ff,
+    #cafc05 */
+   /* Cor de fundo em formato gradiente */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-text h1 {
+  margin: var(--margin-basic);
+  font-size: var(--fonte-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.logo {
+  height: 270px;
+}
+
+.header-text {
+  flex-grow: 1; /* O quanto um elemento deve crescer para ocupar um o espaço em branco */
+  text-align: center;
+  color: white;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--cor-nav);
+  padding: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: bold;
+  position: relative; /*Posição normal, como o codigo está indo */
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: ""; /* irá definir o conteudo de um elemento, no caso after */
+  position: absolute; /* permite com que ele se "remova" e que outros elementos sobreponham ele */
+  width: 0%;
+  height: 3px;
+  background: var(--cor-nav-a-bckground);
+  bottom: -5px; 
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #fdd835;
+}
+
+main {
+  padding: 3rem 5%;
+  background: #d395ff;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  border-left: 10px solid #fdd835;
+  padding-left: 1rem;
+}
+
+section p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #eeeeee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #8b069a;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #555;
+}
+
+footer {
+  background: linear-gradient(90deg, #ffffff, #d395ff, #cafc05);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+}
+
+.button {
+  background: linear-gradient(45deg, #43a047, #fbc02d);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(45deg, #1976d2, #fdd835);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fdd835, 0 0 20px #fbc02d;
+  }
+  to {
+    text-shadow: 0 0 20px #fdd835, 0 0 30px #fbc02d;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    margin: 0 1rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+  form {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+
+  form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1976d2;
+  }
+
+  form input[type="text"],
+  form select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+  }
+
+  form input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  content {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    height: 80px;
+  }
+  content {
+    width: 100%;
+    height: 800px;
+  }
+  .right {
+    width: 100%;
+    height: 80px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  content {
+    flex-direction: row;
+  }
+  .left {
+    background-color: rgb(192, 136, 227);
+    width: 680px;
+    height: 300px;
+  }
+  content {
+    width: 680px;
+    height: 300px;
+  }
+  .right {
+    width: 680px;
+    height: 300px;
+  }
+}

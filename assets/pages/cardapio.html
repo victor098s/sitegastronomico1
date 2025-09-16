@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio Cultural Bites</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oi&display=swap&#39');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(90deg, #ffffff, #d395ff, #cafc05);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+
+}
+
+.logo {
+    height: 270px;
+}
+
+.header-text {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: "Oi", serif;
+    font-weight: 320;
+    font-style: normal;
+}
+
+.header-text p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.menu-section {
+    padding: 40px 20px;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 6px solid #d395ff;
+    padding-left: 10px;
+    color: #222;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #600a9e;
+    font-size: 1.2rem;
+}
+
+footer {
+    background: linear-gradient(90deg, #ffffff, #d395ff, #cafc05);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: #8b069a;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #fbc02d;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #fdd835;
+}
+@media (max-width: 768px) {
+  content {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    height: 80px;
+  }
+   content{
+    width: 100%;
+    height: 800px;
+  }
+  .right {
+    width: 100%;
+    height: 80px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  content {
+    flex-direction: row;
+  }
+  .left {
+    background-color: rgb(192, 136, 227);
+    width: 680px;
+    height: 300px;
+  }
+  content {
+    width: 680px;
+    height: 300px;
+  }
+  .right {
+    width: 680px;
+    height: 300px;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+    <img src="../img/BIG-removebg-preview.png" alt="Logo Cultural Bites" class="logo">
+    <div class="header-text">
+    <h1>Cultural Bites!</h1>
+    <p><strong>TIME TO BRUNCH</strong></p>
+
+  </header>
+    <nav>
+    <a href="../../index.html">INÍCIO</a>
+    <a href="../pages/Cardapio.html">CARDÁRPIO</a>
+    <a href="../pages/Contato.html">CONTATO</a>
+  </nav>
+
+  <main>
+    <section class="menu-section">
+      <h2>Brazilian's Food</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/frimesa-receitas-eisbein-1.jpg" alt="Feijoada"></a>
+          <h3>Feijoada</h3>
+          <p>Feijão preto com carnes, arroz e acompanhamentos.</p>
+          <span class="price">R$ 40,00</span>
+        </div>
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/ideias-de-recheios-de-pastel-scaled-e1654349592262-1024x576.jpeg" 
+            alt="Pastel"></a>
+          <h3>Pastel</h3>
+          <p>Crocante e reccheado com os sabores de sua preferiência (carne, queijo, presunto e queijo, frango e calabresa com catupiry).</p>
+          <span class="price">R$ 15,00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Chinese's Food</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/fe9f389134b872478c99a836d55de88e_XL.jpg" alt="Yakissoba"></a>
+          <h3>Yakissoba</h3>
+          <p>Macarrão com legumes e carne ao molho shoyu.</p>
+          <span class="price">R$ 30,00</span>
+        </div>
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/e8dcebfd55c9d5d7bbfc0a0f8263a6f3_XL.jpg" alt="Rolinho Primavera"></a>
+          <h3>Rolinho Primavera</h3>
+          <p>Enrolado crocante recheado com legumes.</p>
+          <span class="price">R$ 12,00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Italian's Food</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/Pizza-marguerita-caseira.webp" alt="Pizza Margherita"></a>
+          <h3>Pizza Margherita</h3>
+          <p>Molho de tomate, muçarela e manjericão fresco.</p>
+          <span class="price">R$ 55,00</span>
+        </div>
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/capa-materia-gshow-2022-02-16t145245.399.webp" alt="Lasanha"></a>
+          <h3>Lasanha à Bolonhesa</h3>
+          <p>Camadas de massa, molho e queijo gratinado.</p>
+          <span class="price">R$ 48,00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>Japonese's Food</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/685994b91bf9182d355531b2_tipos-de-sushi.jpg" alt="Sushi"></a>
+          <h3>Sushi</h3>
+          <p>Peixes frescos e arroz temperado em porções delicadas.</p>
+          <span class="price">R$ 60,00</span>
+        </div>
+        <div class="card">
+          <a href="../pages/Formulario.html"><img src="../img/lamen-de-porco-restaurante-a-casa-do-porco-1470340909334_v2_4x3.jpg" alt="Lamen"></a>
+          <h3>Lamen</h3>
+          <p>Macarrão oriental servido em caldo quente e saboroso.</p>
+          <span class="price">R$ 38,00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>American's Food</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <a href="../pages/formulario.html"><img src="../img/hamburgueria-americana-saipos-sistema-para-restaurante-4_uid_664f3d2daf702.jpg" alt="Hambúrguer"></a>
+          <h3>Hambúrguer Artesanal</h3>
+          <p>Pão, carne grelhada, queijo, alface e molho especial.</p>
+          <span class="price">R$ 35,00</span>
+        </div>
+        <div class="card">
+        <a href="../pages/formulario.html"><img src="../img/panqueca-americana-1.jpg" alt="Panquecas"></a>
+          <h3>Panquecas Americanas</h3>
+          <p>Servidas com mel, frutas e maple syrup.</p>
+          <span class="price">R$ 25,00</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 CULTURAL BITES</p>
+  </footer>
+</body>
+</html>

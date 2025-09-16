@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Pedido</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to right, #e6c9ff, #f9f871);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .form-container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .order-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #444;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #7e2fc8;
+        box-shadow: 0 0 5px rgba(128, 32, 218, 0.5);
+      }
+
+      /* Novo estilo para opções de pagamento */
+      .payment-options {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+      }
+
+      .payment-options label {
+        font-weight: normal;
+        color: #333;
+        cursor: pointer;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: #a855f7;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button,
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      button:hover {
+        background: #9333ea;
+      }
+
+      button,
+      .btn-voltar {
+        margin-top: 20px;
+        width: 270px;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #a855f7, #9333ea);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        
+      }
+
+      button:hover,
+      .btn-voltar:hover {
+        background: linear-gradient(135deg, #9333ea, #7e22ce);
+      }
+      .buton {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Faça seu Pedido 🍴</h2>
+      <form action="#" method="POST" class="order-form">
+        <label for="name">Nome</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Seu nome completo"
+          required
+        />
+        <label for="Endereço">Endereço</label>
+        <input
+          type="text"
+          id="Endereço"
+          name="Endereço"
+          placeholder="Coloque seu endereço"
+          required
+        />
+
+        <label for="phone">Telefone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="(99) 99999-9999"
+          required
+        />
+
+        <label for="quantity">Quantidade</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          value="1"
+          required
+        />
+
+        <label for="obs">Observações</label>
+        <textarea
+          id="obs"
+          name="obs"
+          rows="3"
+          placeholder="Ex: sem pimenta, com molho separado"
+        ></textarea>
+
+        <!-- Novo campo: Forma de pagamento -->
+        <label>Forma de Pagamento</label>
+        <div class="payment-options">
+          <label
+            ><input type="radio" name="payment" value="pix" required />
+            PIX</label
+          >
+          <label
+            ><input type="radio" name="payment" value="cartao" /> Cartão</label
+          >
+          <label
+            ><input type="radio" name="payment" value="dinheiro" />
+            Dinheiro</label
+          >
+        </div>
+        <div class="buton animate__animated ">
+        <a href="../Pages/Pedidoenv.html" class="btn-voltar">ENVIAR PEDIDO</a>
+        </div>
+        </div>
+      </form>
+  </body>
+</html>
+<!-- <button type="submit">ENVIAR PEDIDO</button> -->
